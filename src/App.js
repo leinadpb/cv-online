@@ -1,24 +1,175 @@
-import logo from './logo.svg';
-import './App.css';
+/** @format */
+
+import "./App.css";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background-color: #fcfcfc;
+  padding: 0vw 10vw;
+  overflow: hidden;
+  margin: 0px;
+`;
+
+const HeaderWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  font-family: "DanielFont", sans-serif;
+  background-color: #ffffff;
+`;
+
+const ContentWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row; /* Change flex direction to column */
+  padding: 24px;
+`;
+
+const SkillsWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  padding-top: 54px;
+
+  div {
+    margin: 4px;
+    transition: 0.2s ease-in;
+    &:hover {
+      cursor: pointer;
+      transform: scale(0.95, 1);
+    }
+  }
+`;
+
+const ContactWrapper = styled.div`
+  width: auto;
+  i {
+    font-size: 1.2vw;
+  }
+`;
+
+const NameWrapper = styled.div`
+  font-size: 2.5vh;
+  font-weight: 600;
+`;
+
+const UserInfoWrapper = styled.div`
+  width: 100%;
+`;
+
+const UserPicture = styled.div`
+  width: 100%;
+`;
+
+const SocialLinks = styled.div`
+  width: 100%;
+  padding: 16px;
+  i {
+    font-size: 1.6vw;
+    color: #355973;
+  }
+`;
+
+const ShortTitle = styled.div`
+  width: 100%;
+  padding-top: 54px;
+  padding-bottom: 16px;
+  font-family: "Poor Story", sans-serif;
+  font-size: 2vw;
+`;
+
+const ShortLine = styled.div`
+  width: 100%;
+  padding-bottom: 16px;
+  font-family: "DanielFont", sans-serif;
+  font-size: 1.1vw;
+  font-weight: 100;
+  color: gray;
+`;
+
+const Ship = styled.div`
+  display: inline-block;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: ${(props) => props.bgColor || "#5C8AAB"};
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <HeaderWrapper>
+        <NameWrapper>DANIEL PENA</NameWrapper>
+        <ContactWrapper>
+          <a
+            href="mailto:digrape07@gmail.com"
+            target="_blank"
+            className="flex items-center"
+          >
+            <i className="fas fa-envelope mr-2"></i> Email me!
+          </a>
+        </ContactWrapper>
+      </HeaderWrapper>
+      <ContentWrapper>
+        <UserInfoWrapper>
+          <SocialLinks>
+            <div className="flex justify-start">
+              <a
+                href="https://www.linkedin.com/in/leinadpb/"
+                target="_blank"
+                className="mr-8"
+              >
+                <i className="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://github.com/leinadpb"
+                target="_blank"
+                className="mr-8"
+              >
+                <i className="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCwNlyj7ynNLvU8a4yA0-T4w"
+                target="_blank"
+              >
+                <i className="fab fa-youtube"></i>
+              </a>
+            </div>
+          </SocialLinks>
+          <ShortTitle>Hi! I'm Daniel.</ShortTitle>
+          <ShortLine>
+            Experienced Senior Software Engineer skilled in fintech, excelling
+            in full-stack web development with entrepreneurial drive.
+          </ShortLine>
+        </UserInfoWrapper>
+        <UserPicture>
+          <div className="hidden md:flex items-start justify-center">
+            <img
+              src="./me-logo.jpg"
+              alt="Daniel Pena"
+              width={"300vw"}
+              className="rounded-full max-w-full max-h-full"
+            />
+          </div>
+        </UserPicture>
+      </ContentWrapper>
+      <SkillsWrapper>
+        <Ship bgColor={"#5C8AAB"}>JavaScript</Ship>
+        <Ship bgColor={"#5C8AAB"}>NodeJS</Ship>
+        <Ship bgColor={"#5C8AAB"}>ReactJS</Ship>
+        <Ship bgColor={"#5C8AAB"}>NestJS</Ship>
+        <Ship bgColor={"#5C8AAB"}>AWS</Ship>
+        <Ship bgColor={"#5C8AAB"}>GCP</Ship>
+        <Ship bgColor={"#5C8AAB"}>Docker</Ship>
+        <Ship bgColor={"#5C8AAB"}>Software Architecture</Ship>
+        <Ship bgColor={"#5C8AAB"}>Playwright</Ship>
+        <Ship bgColor={"#5C8AAB"}>Jest</Ship>
+      </SkillsWrapper>
+    </Wrapper>
   );
 }
 
