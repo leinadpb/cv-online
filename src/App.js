@@ -10,6 +10,8 @@ const Wrapper = styled.div`
   padding: 0vw 10vw;
   overflow: hidden;
   margin: 0px;
+  display: flex;
+  flex-direction: column;
 `;
 
 const HeaderWrapper = styled.div`
@@ -26,11 +28,16 @@ const ContentWrapper = styled.div`
   display: flex;
   flex-direction: row; /* Change flex direction to column */
   padding: 24px;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const SkillsWrapper = styled.div`
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   padding-top: 54px;
 
   div {
@@ -48,10 +55,16 @@ const ContactWrapper = styled.div`
   i {
     font-size: 1.2vw;
   }
+
+  @media only screen and (max-width: 768px) {
+    i {
+      font-size: 3.8vw;
+    }
+  }
 `;
 
 const NameWrapper = styled.div`
-  font-size: 2.5vh;
+  font-size: 2vh;
   font-weight: 600;
 `;
 
@@ -70,6 +83,16 @@ const SocialLinks = styled.div`
     font-size: 1.6vw;
     color: #355973;
   }
+
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    i {
+      font-size: 5vw;
+      color: #355973;
+    }
+  }
 `;
 
 const ShortTitle = styled.div`
@@ -78,6 +101,10 @@ const ShortTitle = styled.div`
   padding-bottom: 16px;
   font-family: "Poor Story", sans-serif;
   font-size: 2vw;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 6vw;
+  }
 `;
 
 const ShortLine = styled.div`
@@ -87,6 +114,9 @@ const ShortLine = styled.div`
   font-size: 1.1vw;
   font-weight: 100;
   color: gray;
+  @media only screen and (max-width: 768px) {
+    font-size: 4vw;
+  }
 `;
 
 const Ship = styled.div`
