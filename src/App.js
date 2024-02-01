@@ -21,6 +21,8 @@ const HeaderWrapper = styled.div`
   padding: 24px;
   font-family: "DanielFont", sans-serif;
   background-color: #ffffff;
+  border-end-end-radius: 8px;
+  box-shadow: 0.2px 0.2px rgba(0, 0, 0, 0.16);
 `;
 
 const ContentWrapper = styled.div`
